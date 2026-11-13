@@ -442,8 +442,7 @@ footer p {
 }
 
 body {
-  background: linear-gradient(135deg, #eef2ff 0%, #faf5ff 50%, #fdf2f8 100%);
-  background-attachment: fixed;
+  background: #f5f3ff url("./assets/background.svg") center / cover no-repeat fixed;
   color: var(--ink);
 }
 
@@ -563,6 +562,24 @@ a:hover {
   color: var(--indigo);
 }
 
-.section__pic-container img {
-  mix-blend-mode: multiply;
+/* SCROLL ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(48px) scale(0.96);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
