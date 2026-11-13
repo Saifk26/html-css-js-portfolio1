@@ -583,3 +583,19 @@ a:hover {
     transition: none;
   }
 }
+
+/* PROJECT IMAGES */
+
+#projects .article-container {
+  display: block;
+}
+
+.project-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgba(30, 27, 75, 0.18);
+}
